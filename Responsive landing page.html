@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    nav.scrolled {
+      background-color: #007BFF;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .nav-links a:hover {
+      background-color: white;
+      color: #333;
+    }
+
+    .hero-section {
+      height: 100vh;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    section {
+      padding: 100px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    section p {
+      font-size: 18px;
+      color: #444;
+    }
+
+    #about {
+      background-color: #fff0f5; /* Light pinkish lavender */
+    }
+
+    #services {
+      background-color: #f0fff0; /* Light mint */
+    }
+
+    #contact {
+      background-color: #f0f8ff; /* Alice blue */
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="logo">MySite</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero-section" id="home">
+    <h1>Welcome to MySite</h1>
+    <p>Your responsive landing page starts here.</p>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a creative tech company delivering innovative digital solutions for businesses and individuals. Our mission is to provide user-friendly, responsive, and modern web experiences.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>We offer website design, development, branding, UI/UX design, and SEO services tailored to your needs. Our goal is to boost your online presence and help you grow.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to work with us? Reach out at <strong>contact@mysite.com</strong> or call us at <strong>+91 98765 43210</strong>.</p>
+  </section>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const nav = document.getElementById("navbar");
+      if (window.scrollY > 50) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+</body>
+</html>
